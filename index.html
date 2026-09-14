@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на Свидание</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Stage 1: Initial Question -->
+        <div id="stage1" class="stage active">
+            <div class="card">
+                <h1>💕 Ты пойдешь со мной на свидание? 💕</h1>
+                <div class="button-group">
+                    <button id="yesBtn" class="btn btn-yes">Да! ✨</button>
+                    <button id="noBtn" class="btn btn-no">Нет</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 2: Second Chance -->
+        <div id="stage2" class="stage">
+            <div class="card">
+                <h1>🥺 Пожалуйста, дай мне еще один шанс! 🥺</h1>
+                <p class="subtitle">Я обещаю, что это будет незабываемо!</p>
+                <div class="button-group">
+                    <button id="yesBtn2" class="btn btn-yes">Да! 💖</button>
+                    <button id="noBtn2" class="btn btn-no">Все равно нет</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 3: Date Selection -->
+        <div id="stage3" class="stage">
+            <div class="card">
+                <h2>📅 Выбери дату</h2>
+                <input type="date" id="dateInput" class="input-field">
+                <button id="nextDateBtn" class="btn btn-primary">Далее →</button>
+            </div>
+        </div>
+
+        <!-- Stage 4: Time Selection -->
+        <div id="stage4" class="stage">
+            <div class="card">
+                <h2>🕐 Выбери время</h2>
+                <input type="time" id="timeInput" class="input-field">
+                <button id="nextTimeBtn" class="btn btn-primary">Далее →</button>
+            </div>
+        </div>
+
+        <!-- Stage 5: Location Selection -->
+        <div id="stage5" class="stage">
+            <div class="card">
+                <h2>📍 Где бы ты хотела пойти?</h2>
+                <div class="location-options">
+                    <button class="location-btn" data-location="cafe">☕ Кафе</button>
+                    <button class="location-btn" data-location="walk">🚶 Прогулка</button>
+                    <button class="location-btn" data-location="cinema">🎬 Кино</button>
+                    <button class="location-btn" data-location="restaurant">🍽️ Ресторан</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 5a: Cafe Options -->
+        <div id="stage5a" class="stage">
+            <div class="card">
+                <h2>☕ Какую кухню ты предпочитаешь?</h2>
+                <div class="options-grid">
+                    <button class="option-btn" data-option="italian">🇮🇹 Итальянская</button>
+                    <button class="option-btn" data-option="asian">🇰🇷 Азиатская</button>
+                    <button class="option-btn" data-option="georgian">🇬🇪 Грузинская</button>
+                    <button class="option-btn" data-option="russian">🇷🇺 Русская</button>
+                    <button class="option-btn" data-option="international">🌍 Интернациональная</button>
+                    <button class="option-btn" data-option="desserts">🧁 Десерты и напитки</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 5b: Walk Options -->
+        <div id="stage5b" class="stage">
+            <div class="card">
+                <h2>🚶 Где бы ты хотела погулять?</h2>
+                <div class="options-grid">
+                    <button class="option-btn" data-option="oak_park">🌳 Парк Панфилова (Дубовый парк)</button>
+                    <button class="option-btn" data-option="ala_too">⛰️ Площадь Ала-Тоо</button>
+                    <button class="option-btn" data-option="issyk_kul">💧 Озеро Иссык-Куль</button>
+                    <button class="option-btn" data-option="mall">🏬 ТЦ Караван</button>
+                    <button class="option-btn" data-option="city_center">🏙️ Центр города</button>
+                    <button class="option-btn" data-option="botanical">🌺 Ботанический сад</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 5c: Cinema Options -->
+        <div id="stage5c" class="stage">
+            <div class="card">
+                <h2>🎬 Какой жанр фильма?</h2>
+                <div class="options-grid">
+                    <button class="option-btn" data-option="romance">💕 Романтика</button>
+                    <button class="option-btn" data-option="comedy">😂 Комедия</button>
+                    <button class="option-btn" data-option="action">🎬 Боевик</button>
+                    <button class="option-btn" data-option="thriller">😨 Триллер</button>
+                    <button class="option-btn" data-option="drama">🎭 Драма</button>
+                    <button class="option-btn" data-option="fantasy">✨ Фэнтези</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 5d: Restaurant Options -->
+        <div id="stage5d" class="stage">
+            <div class="card">
+                <h2>🍽️ Какую кухню ты предпочитаешь?</h2>
+                <div class="options-grid">
+                    <button class="option-btn" data-option="fine_dining">👑 Французская кухня</button>
+                    <button class="option-btn" data-option="japanese">🍱 Японская</button>
+                    <button class="option-btn" data-option="steakhouse">🥩 Стейк-хаус</button>
+                    <button class="option-btn" data-option="korean">🍜 Корейская</button>
+                    <button class="option-btn" data-option="central_asian">🥘 Среднеазиатская</button>
+                    <button class="option-btn" data-option="seafood">🦞 Морепродукты</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage 6: Final Ticket -->
+        <div id="stage6" class="stage">
+            <div class="ticket">
+                <div class="ticket-header">
+                    <h1>💖 БИЛЕТ НА СВИДАНИЕ 💖</h1>
+                </div>
+                <div class="ticket-content">
+                    <div class="ticket-item">
+                        <span class="label">📅 Дата:</span>
+                        <span class="value" id="ticketDate"></span>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="label">🕐 Время:</span>
+                        <span class="value" id="ticketTime"></span>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="label">📍 Место:</span>
+                        <span class="value" id="ticketLocation"></span>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="label">✨ Дополнительно:</span>
+                        <span class="value" id="ticketDetails"></span>
+                    </div>
+                </div>
+                <div class="ticket-footer">
+                    <p class="message">Спасибо за то, что сказала "ДА"! 💕</p>
+                    <p class="special-message">Это будет лучшее свидание в твоей жизни! ✨</p>
+                </div>
+                <button id="downloadBtn" class="btn btn-primary">📥 Скачать билет</button>
+                <button id="shareBtn" class="btn btn-secondary">📤 Поделиться</button>
+            </div>
+        </div>
+
+        <!-- Stage 7: Rejection -->
+        <div id="stage7" class="stage">
+            <div class="card rejection-card">
+                <h1>😢 Ладно, понимаю...</h1>
+                <p class="subtitle">Если ты когда-нибудь передумаешь, я буду ждать! 💔</p>
+                <div class="button-group">
+                    <button id="restartBtn" class="btn btn-primary">Начать заново</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
